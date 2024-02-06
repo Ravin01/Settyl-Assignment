@@ -1,0 +1,32 @@
+$background-white: #ECF0F1;
+$box-shadow: black;
+.nav-container{
+    width: 80vw;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px;
+    align-items: center;
+    background-color: $background-white;
+    box-shadow: 1px 2px 10px $box-shadow;
+}
+
+.nav-user img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.nav-search-input{
+    border: none;
+    padding: 0px 10px;
+    border-radius: 8px;
+    height: 5vh;
+    width: 30vw;
+    box-shadow: 1px 2px 5px $box-shadow;
+}
+.nav-search-input:focus{
+    outline: none;
+    box-shadow: 2px 5px 10px $box-shadow;
+}

@@ -1,0 +1,58 @@
+$background-color: #369ce0;
+$font-color: #242424;
+$size: 16px;
+
+.sideNav-container{
+    width: 20vw;
+    height: 100vh;
+    background-color: $background-color;
+    color: $font-color;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.sideNav-header{
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sideNav-body{
+    display: flex;
+    flex-direction: column;
+}
+
+.sideNav-body-link{
+    color: $font-color;
+    text-decoration: none;
+    font-size: $size;
+    font-weight: 500;
+}
+
+.sideNav-filter{
+    display: flex;
+    height: 20px;
+    width: 18vw;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+}
+
+.sideNav-items{
+    position: absolute;
+    left: 20px;
+    top: 45vh;
+    width: 10vw;
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+}

@@ -1,0 +1,29 @@
+Create a Dashboard using ReactJS + D3 Charts/Charts Js making use of the dummy APIs mentioned below (Feel free to take up any other dummy APIs)
+
+Reference Dummy APIs :  Examples http://dummy.restapiexample.com/ 
+https://reqres.in/
+
+
+Implement the following solution :- 
+
+ Change parent state from child. 
+
+ Use redux store and pass to child components
+
+ Loading API data in a component only once
+
+ Update a grid when adding a row without server call/ api refresh 
+
+ Use scss for constant s in css 
+
+ Use css to change arrow direction in a drop down window when toggle happens
+
+ Show or hide a component depending upon state. 
+
+ Render different components for desktop /mobile for different views
+
+
+
+
+Please acknowledge, if you are ready to take up the evaluation
+ 

@@ -1,0 +1,18 @@
+.home-container{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home-content{
+    padding: 20px 10px;
+    width: 80vw;
+    height: 90vh;
+    overflow-y: scroll;
+}
+
+.home-content::-webkit-scrollbar{
+    display: none;
+}
