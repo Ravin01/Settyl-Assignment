@@ -1,6 +1,6 @@
 $background-color: #369ce0;
 $font-color: #242424;
-$size: 16px;
+$size: 18px;
 
 .sideNav-container{
     width: 20vw;
@@ -24,6 +24,7 @@ $size: 16px;
 .sideNav-body{
     display: flex;
     flex-direction: column;
+    padding: 0px 20px;
 }
 
 .sideNav-body-link{
@@ -31,6 +32,14 @@ $size: 16px;
     text-decoration: none;
     font-size: $size;
     font-weight: 500;
+    display: flex;
+    height: 50px;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0px 10px;
+}
+.sideNav-body-link p{
+    margin: 0px 0px 0px 20px;
 }
 
 .sideNav-filter{
@@ -40,12 +49,15 @@ $size: 16px;
     justify-content: space-between;
     align-items: center;
     padding: 0px 10px;
+    margin: 30px 0px;
+    cursor: pointer;
 }
+
 
 .sideNav-items{
     position: absolute;
     left: 20px;
-    top: 45vh;
+    top: 55vh;
     width: 10vw;
     height: 25vh;
     display: flex;
