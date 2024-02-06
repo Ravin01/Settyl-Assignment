@@ -1,6 +1,9 @@
 import { useState } from "react";
 import "../styles/SideNav.scss";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { departmentFilter } from "../Redux/Slice";
+
 
 const SideNav = () => {
   const [isOpenDepartmentDiv, setIsOpenDepartmentDiv] = useState(false);
@@ -11,6 +14,15 @@ const SideNav = () => {
     setIsOpenDepartmentDiv(!isOpenDepartmentDiv);
     setArrowDepartment(isOpenDepartmentDiv ? "right" : "down");
   };
+
+  const dispatch = useDispatch();
+
+
+
+  const handleSelectDepartment = (d)=>{
+    dispatch(departmentFilter(d))
+    // console.log(d)
+  }
 
   return (
     <div className="sideNav-container">
@@ -38,10 +50,10 @@ const SideNav = () => {
           <i className={`fa-solid fa-angle-${arrowDepartment}`}></i>
           {isOpenDepartmentDiv && (
             <div className="sideNav-items">
-              <p>ECE</p>
-              <p>EEE</p>
-              <p>CSE</p>
-              <p>Civil</p>
+              <p onClick={() => handleSelectDepartment('ECE')} >ECE</p>
+              <p onClick={() => handleSelectDepartment('EEE')} >EEE</p>
+              <p onClick={() => handleSelectDepartment('CSE')} >CSE</p>
+              <p onClick={() => handleSelectDepartment('Civil')} >Civil</p>
             </div>
           )}
         </div>
