@@ -29,7 +29,7 @@ const SideNav = () => {
             <div className="sideNav-items">
               <p>ECE</p>
               <p>EEE</p>
-              <p>CSE</p>
+              <p>CSE</p> 
               <p>Civil</p>
             </div>
           )}
