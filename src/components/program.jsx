@@ -20,7 +20,7 @@ const Program = () => {
     setNewRow(prevState => ({
       ...prevState,
       [name]: value
-    }));
+    }));     
   };
 
 
