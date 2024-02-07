@@ -6,21 +6,48 @@ https://reqres.in/
 
 Implement the following solution :- 
 
- Change parent state from child. 
+ 1.Change parent state from child. 
+        I have state in home component. Home component is parent of Nav component. 
+        I have passed the searchInput state to Nav component like props. And whenever user access the input, then i changed the state in home component
+        for your reference 
+        Home.jsx  - line no : 20, 26, 35
+        Nav.jsx - line no : 7,18
 
  Use redux store and pass to child components
 
- Loading API data in a component only once
+3. Loading API data in a component only once
+        using UseEffect(()=>{},[]) hook to make the api call or render api data at only once
+        for your reference
+        Container.jsx - line no : 35
 
- Update a grid when adding a row without server call/ api refresh 
+ 4. Update a grid when adding a row without server call/ api refresh 
+        I update a grid data whenever user adding the data without making the api call/ server call.
+        for your reference
+        program.jsx 
 
- Use scss for constant s in css 
+ 5. Use scss for constant s in css 
+        for your reference
+        Container.scss,
+        Dashboard.scss,
+        Nav.scss,
+        SideNav.scss
 
- Use css to change arrow direction in a drop down window when toggle happens
+ 6. Use css to change arrow direction in a drop down window when toggle happens
+        I created a state which is for handle the arrow direction in SIdeNav component.
+        for your reference
+        SideNav.jsx - line no: 11, 50
 
- Show or hide a component depending upon state. 
 
- Render different components for desktop /mobile for different views
+ 7. Show or hide a component depending upon state. 
+        I created a state for handle the show and hide the component. Which is User component like conditional rendering
+        for your reference
+        Nav.jsx - line no: 8,30
+
+
+ 8. Render different components for desktop /mobile for different views
+        My code renders Departments component for desktop and List component for Mobile screen using react-responsive package.
+        for your reference
+        Dashboard.jsx - line no: 11, 16, 45
 
 
 

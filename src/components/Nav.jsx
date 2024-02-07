@@ -1,9 +1,10 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react"
 import User from "./User"
 
 import '../styles/Nav.scss'
 
-const Nav = () => {
+const Nav = ({setSearchInput, searchInput}) => {
     const [isUserDivOPen, setIsUserDivOpen] = useState(false)
 
     const handleOpenUserDiv = () =>{
@@ -11,7 +12,7 @@ const Nav = () => {
     }
 
 
-    const [searchInput, setSearchInput] = useState('')
+    
 
     const handleChange=(e)=>{
         setSearchInput(e.target.value)

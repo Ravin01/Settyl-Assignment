@@ -23,7 +23,7 @@ const Home = () => {
     <div className="home-container">
       <SideNav />
       <div className="home-main">
-        <Nav setSearchInput={setSearchInput} />
+        <Nav setSearchInput={setSearchInput} searchInput={searchInput} />
 
         <div className="home-content">
           <Routes>

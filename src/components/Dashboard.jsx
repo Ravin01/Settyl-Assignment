@@ -46,10 +46,10 @@ const Dashboard = () => {
         </div>
       )}
 
-        <h3>Present Count</h3>
+      <h3>Present Count</h3>
       <div className="dashboard-pieChart">
         <div className="pieChart">
-        <PieChart />
+          <PieChart />
         </div>
       </div>
       <h3>Last year total strength</h3>
