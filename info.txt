@@ -13,12 +13,16 @@ Implement the following solution :-
         Home.jsx  - line no : 20, 26, 35
         Nav.jsx - line no : 7,18
 
- Use redux store and pass to child components
+ 2. Use redux store and pass to child components
+        I want to pass a data from SideNav.jsx to Container.jsx, Here i use redux to pass data.
+        I created redux store, slice for reducers 
+        dispatch() - sideNav.jsx line no: 18
+        useSelector() - Container.jsx line no: 14
 
 3. Loading API data in a component only once
         using UseEffect(()=>{},[]) hook to make the api call or render api data at only once
         for your reference
-        Container.jsx - line no : 35
+        Container.jsx - line no : 28
 
  4. Update a grid when adding a row without server call/ api refresh 
         I update a grid data whenever user adding the data without making the api call/ server call.

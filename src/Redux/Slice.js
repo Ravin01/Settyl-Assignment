@@ -7,7 +7,7 @@ export const DepartmentSlice = createSlice({
   },
   reducers: {
     departmentFilter: (state, action) => {
-       return action
+       return action.payload
     },
   },
 })
@@ -16,3 +16,6 @@ export const DepartmentSlice = createSlice({
 export const { departmentFilter } = DepartmentSlice.actions
 
 export default DepartmentSlice.reducer
+
+
+

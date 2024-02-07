@@ -21,7 +21,6 @@ const SideNav = () => {
 
   const handleSelectDepartment = (d)=>{
     dispatch(departmentFilter(d))
-    // console.log(d)
   }
 
   return (

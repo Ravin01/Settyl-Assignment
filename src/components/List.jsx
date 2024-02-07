@@ -2,7 +2,12 @@
 
 const List = () => {
   return (
-    <div>List</div>
+    <div className="list-container" >
+      <li>ECE - 3</li>
+      <li>EEE - 1</li>
+      <li>CSE - 4</li>
+      <li>Civil - 2</li>
+    </div>
   )
 }
 

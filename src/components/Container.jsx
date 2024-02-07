@@ -4,16 +4,20 @@ import { useEffect, useState } from "react";
 import { backendUrl } from "../../config";
 
 import "../styles/Container.scss";
+import { useSelector } from "react-redux";
 
 const Container = ({ searchInput }) => {
   const [data, setData] = useState([]);
 
-  const [emptyData, setEmptyData] = useState("");
+  const [emptyData, setEmptyData] = useState([]);
+
+  const departmentFilter = useSelector(action => action.department)
+
+
 
   const getAllData = async () => {
     try {
       let data = await axios.get(`${backendUrl}`);
-      console.log(data.data);
       setEmptyData(data.data);
       setData(data.data);
     } catch (err) {
@@ -22,19 +26,24 @@ const Container = ({ searchInput }) => {
   };
 
   useEffect(() => {
-    if (searchInput !== "") {
-      const filter = emptyData.filter((stu) =>
-        stu.name.toLowerCase().includes(searchInput.toLowerCase())
-      );
-      setData(filter);
-    } else {
-      setData(emptyData);
-    }
-  }, [searchInput]);
-
-  useEffect(() => {
     getAllData();
   }, []);
+
+  useEffect(() => {
+    if (searchInput !== "" || departmentFilter !== undefined) {
+      const filter = emptyData
+      .filter((stu) => searchInput !== '' ?
+        stu.name.toLowerCase().includes(searchInput.toLowerCase()) : true
+      )
+      .filter((stu) =>  departmentFilter!== '' ? stu.department === departmentFilter : true)
+      setData(filter);
+    }
+    else {
+      setData(emptyData);
+    }
+  }, [searchInput, departmentFilter]);
+
+ 
   return (
     <div className="container-con">
       {data.length === 0 ? (

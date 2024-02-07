@@ -8,7 +8,6 @@ import Dashboard from "../components/Dashboard";
 import Page404 from "./Page404";
 import { useEffect, useState } from "react";
 import Program from "../components/program";
-import Student from "../components/Student";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -29,7 +28,6 @@ const Home = () => {
           <Routes>
             <Route index path="/dashboard" element={<Dashboard />} />
             <Route path="/program" element={<Program />} />
-            <Route path="/student" element={<Student />} />
             <Route
               path="/students"
               element={<Container searchInput={searchInput} />}
