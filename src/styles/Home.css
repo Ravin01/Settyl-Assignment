@@ -16,3 +16,10 @@
 .home-content::-webkit-scrollbar{
     display: none;
 }
+
+
+@media screen and (max-width: 850px) {
+    .home-content{
+        width: 100vw;
+    }
+}

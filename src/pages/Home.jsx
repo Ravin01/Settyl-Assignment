@@ -18,11 +18,13 @@ const Home = () => {
 
   const [searchInput, setSearchInput] = useState("");
 
+  const [sideNavClass, setSideNavClass] = useState('sideNav-container')
+
   return (
     <div className="home-container">
-      <SideNav />
+      <SideNav sideNavClass={sideNavClass} />
       <div className="home-main">
-        <Nav setSearchInput={setSearchInput} searchInput={searchInput} />
+        <Nav setSearchInput={setSearchInput} searchInput={searchInput} setSideNavClass={setSideNavClass} sideNavClass={sideNavClass} />
 
         <div className="home-content">
           <Routes>

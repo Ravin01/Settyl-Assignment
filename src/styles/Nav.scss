@@ -17,7 +17,11 @@ $box-shadow: black;
     border-radius: 50%;
     cursor: pointer;
 }
-
+.nav-header{
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
 .nav-search-input{
     border: none;
     padding: 0px 10px;
@@ -29,4 +33,37 @@ $box-shadow: black;
 .nav-search-input:focus{
     outline: none;
     box-shadow: 2px 5px 10px $box-shadow;
+}
+.nav-bars{
+    display: none;
+}
+
+@media screen and (max-width: 850px) {
+    .nav-container{
+        width: 100vw;
+    }
+    .nav-bars{
+        display: flex;
+        margin: 0px 20px 0px 0px;
+    }
+    .nav-search-input{
+        width: 35vw;
+    }
+}
+@media screen and (max-width: 600px) {
+    .nav-container{
+        width: 100vw;
+    }
+    .nav-search-input{
+        width: 45vw;
+    }
+}
+@media screen and (max-width: 450px) {
+    .nav-container{
+        width: 100vw;
+    }
+    .nav-search-input{
+        width: 55vw;
+        height: 4vh;
+    }
 }

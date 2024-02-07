@@ -1,4 +1,4 @@
-
+import '../styles/List.css'
 
 const List = () => {
   return (

@@ -38,3 +38,24 @@ $background-color: #ECF0F1;
     height: 180px;
     border-radius: 10px;
 }
+
+@media screen and (max-width: 750px) {
+    .container-item{
+        width: 200px;
+        height: 250px;
+    }
+    .container-item img{
+        width: 150px;
+        height: 150px;
+    }
+}
+@media screen and (max-width: 450px) {
+    .container-item{
+        width: 150px;
+        height: 200px;
+    }
+    .container-item img{
+        width: 120px;
+        height: 120px;
+    }
+}

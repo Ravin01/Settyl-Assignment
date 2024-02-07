@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 import "../styles/SideNav.scss";
 import { Link } from "react-router-dom";
@@ -5,7 +6,7 @@ import { useDispatch } from "react-redux";
 import { departmentFilter } from "../Redux/Slice";
 
 
-const SideNav = () => {
+const SideNav = ({sideNavClass}) => {
   const [isOpenDepartmentDiv, setIsOpenDepartmentDiv] = useState(false);
 
   const [arrowDepartment, setArrowDepartment] = useState("right");
@@ -24,7 +25,7 @@ const SideNav = () => {
   }
 
   return (
-    <div className="sideNav-container">
+    <div className={`${sideNavClass}`} >
       <div className="sideNav-header">
         <h2>Administration</h2>
       </div>

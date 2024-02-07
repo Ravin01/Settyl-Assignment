@@ -4,7 +4,7 @@ import User from "./User"
 
 import '../styles/Nav.scss'
 
-const Nav = ({setSearchInput, searchInput}) => {
+const Nav = ({setSearchInput, searchInput, setSideNavClass, sideNavClass}) => {
     const [isUserDivOPen, setIsUserDivOpen] = useState(false)
 
     const handleOpenUserDiv = () =>{
@@ -18,10 +18,23 @@ const Nav = ({setSearchInput, searchInput}) => {
         setSearchInput(e.target.value)
     }
 
+    const [bars, setBars] = useState('bars')
+
+    const handleOpenSideNav = () =>{
+            if(sideNavClass === 'sideNav-container'){
+                setSideNavClass('sideNav-container-open')
+                setBars('x')
+            }else{
+                setBars('bars')
+                setSideNavClass('sideNav-container')
+            }
+    }
+
   return (
     <>
     <div className="nav-container">
         <div className="nav-header">
+            <i className={`fa-solid fa-${bars} nav-bars`} onClick={handleOpenSideNav} ></i>
             <input type="text" className="nav-search-input" placeholder="search students" name="search" id="search" value={searchInput} onChange={handleChange} />
         </div>
         <div className="nav-user" onClick={handleOpenUserDiv} >

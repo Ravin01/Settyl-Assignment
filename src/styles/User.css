@@ -19,3 +19,22 @@
     height: 30%;
     cursor: pointer;
 }
+
+@media screen and (max-width: 850px) {
+    .user-container{
+        width: 20vw;
+        height: 25vh;
+    }
+}
+@media screen and (max-width: 600px) {
+    .user-container{
+        width: 25vw;
+        height: 25vh;
+    }
+}
+@media screen and (max-width: 450px) {
+    .user-container{
+        width: 35vw;
+        height: 20vh;
+    }
+}
